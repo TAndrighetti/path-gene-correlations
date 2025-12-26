@@ -1,0 +1,52 @@
+name: path_gene_correlation
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+  # -------------------------
+  # Core language
+  # -------------------------
+  - python=3.11
+  - pip
+
+  # -------------------------
+  # Scientific Python stack
+  # -------------------------
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - seaborn
+  - statsmodels
+
+  # -------------------------
+  # GEO & pathway analysis
+  # -------------------------
+  - geoparse
+  - decoupler
+
+  # -------------------------
+  # R + Python ↔ R bridge
+  # -------------------------
+  - r-base=4.3
+  - rpy2
+
+  # -------------------------
+  # Bioconductor (core)
+  # -------------------------
+  - bioconductor-annotationdbi
+
+  # -------------------------
+  # Common Bioconductor annotation packages
+  # (install only what you need)
+  # -------------------------
+  - bioconductor-hgu133plus2.db
+  - bioconductor-hugene10sttranscriptcluster.db
+  - bioconductor-mouse4302.db
+
+  # -------------------------
+  # Utilities
+  # -------------------------
+  - tqdm
