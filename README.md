@@ -37,7 +37,7 @@ This repository addresses this by:
 
 
 ## Repository structure
-
+```bash
 .
 ├── results/
 │   └── correlation_IL10_neutrophils.png
@@ -51,7 +51,7 @@ This repository addresses this by:
 │   ├── path_gene_correlation_env.yaml
 │
 └── README.md
-
+```
 
 ## Usage options
 
