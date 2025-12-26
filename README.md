@@ -8,6 +8,16 @@ The project can be used in **two complementary ways**:
 - an **interactive Jupyter notebook** for exploration and development
 - a **fully reproducible command-line pipeline** (`.py` + `.sh`) for automated execution
 
+**What does it return?**
+
+- A **scatter plot** showing the relationship between:
+  - gene expression (single gene), **or**
+  - GSVA-derived pathway activity score (gene set),
+  - Samples colored according to the selected metadata grouping (if provided),
+  - A **global regression line** with 95% confidence interval (visual aid),
+  - **Spearman correlation statistics** (ρ, p-value, n) reported:
+    - per group,
+    - and globally across all samples.
 
 ## Scientific motivation
 
