@@ -105,6 +105,49 @@ such as:
 
 This allows biologically meaningful stratification and reproducible subgroup analyses.
 
+---
+---
+## Gene Set Variation Analysis (GSVA)
+
+**GSVA (Gene Set Variation Analysis)** is a non-supervised method that transforms a gene expression matrix (genes × samples) into a matrix of **pathway or gene set activity scores** (gene sets × samples). Instead of testing predefined group contrasts, GSVA estimates the **relative activity of a biological process in each individual sample**.
+
+In contrast to classical enrichment approaches (e.g. GSEA), GSVA:
+- operates at the **single-sample level**,
+- is robust to inter-individual heterogeneity,
+- enables continuous association analyses (e.g. gene ↔ pathway, pathway ↔ pathway),
+- is well suited for exploratory transcriptomic analyses.
+
+In this project, GSVA is used to summarize the coordinated expression of biologically related genes into a **single continuous score**, enabling direct correlation with individual gene expression or other biological programs.
+
+
+## Defining gene sets to represent biological pathways
+
+The interpretability of GSVA-based analyses critically depends on the **biological definition of the gene set**. A gene set should represent a **coherent functional program**, rather than an arbitrary collection of genes.
+
+Recommended principles for gene set definition:
+
+- **Clear biological concept**  
+  The gene set should correspond to a well-defined process (e.g. neutrophil activation, inflammatory response, metabolic pathway).
+
+- **Literature-driven curation**  
+  Genes should be selected based on:
+  - review articles,
+  - functional studies,
+  - previously published signatures,
+  - curated databases (e.g. KEGG, Reactome, MSigDB, VFDB).
+
+- **Functional coherence over size**  
+  Smaller, well-curated gene sets often yield more interpretable GSVA scores than large, heterogeneous lists.
+
+- **Avoid circularity**  
+  Gene sets should not be defined solely based on differential expression within the same dataset used for downstream analysis, to prevent bias.
+
+- **Context awareness**  
+  The same biological process may require different gene sets depending on tissue, organism, or experimental condition.
+
+In this repository, gene sets are treated as **operational representations of biological programs**, allowing the evaluation of whether the **global activity of a pathway** is associated with the expression of specific genes or other functional modules.
+
+
 
 ## Visualization output
 
